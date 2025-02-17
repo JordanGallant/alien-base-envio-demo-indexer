@@ -1,3 +1,8 @@
 ## Envio Blank Template
 
-*Please refer to the [documentation website](https://docs.envio.dev) for a thorough guide on all [Envio](https://envio.dev) indexer features*
+*Please refer to the [documentation website](https://docs.envio.dev) for a thorough guide on all [Envio](https://envio.dev) indexer features.*
+
+### Run to Start Indexer
+
+```sh
+pnpm envio dev
