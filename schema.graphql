@@ -1,0 +1,66 @@
+type BasedDistributorV2_Add {
+  id: ID!
+  pid: BigInt!
+  allocPoint: BigInt!
+  lpToken: String!
+  depositFeeBP: BigInt!
+  harvestInterval: BigInt!
+  rewarders: [String!]!
+}
+
+type BasedDistributorV2_AllocPointsUpdated {
+  id: ID!
+  caller: String!
+  previousAmount: BigInt!
+  newAmount: BigInt!
+}
+
+type BasedDistributorV2_Deposit {
+  id: ID!
+  user: String!
+  pid: BigInt!
+  amount: BigInt!
+}
+
+type BasedDistributorV2_EmergencyWithdraw {
+  id: ID!
+  user: String!
+  pid: BigInt!
+  amount: BigInt!
+}
+
+type BasedDistributorV2_EmissionRateUpdated {
+  id: ID!
+  caller: String!
+  previousValue: BigInt!
+  newValue: BigInt!
+}
+
+type BasedDistributorV2_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+}
+
+type BasedDistributorV2_RewardLockedUp {
+  id: ID!
+  user: String!
+  pid: BigInt!
+  amountLockedUp: BigInt!
+}
+
+type BasedDistributorV2_UpdatePool {
+  id: ID!
+  pid: BigInt!
+  lastRewardTimestamp: BigInt!
+  lpSupply: BigInt!
+  accAlbPerShare: BigInt!
+}
+
+type BasedDistributorV2_Withdraw {
+  id: ID!
+  user: String!
+  pid: BigInt!
+  amount: BigInt!
+}
+

@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: alienB
+networks:
+- id: 8453
+  start_block: 0
+  contracts:
+  - name: BasedDistributorV2
+    address:
+    - 0x52eaeCAC2402633d98b95213d0b473E069D86590
+    handler: src/EventHandlers.ts
+    events:
+    - event: Add(uint256 indexed pid, uint256 allocPoint, address indexed lpToken, uint16 depositFeeBP, uint256 harvestInterval, address[] indexed rewarders)
+    - event: AllocPointsUpdated(address indexed caller, uint256 previousAmount, uint256 newAmount)
+    - event: Deposit(address indexed user, uint256 indexed pid, uint256 amount)
+    - event: EmergencyWithdraw(address indexed user, uint256 indexed pid, uint256 amount)
+    - event: EmissionRateUpdated(address indexed caller, uint256 previousValue, uint256 newValue)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+    - event: RewardLockedUp(address indexed user, uint256 indexed pid, uint256 amountLockedUp)
+    - event: UpdatePool(uint256 indexed pid, uint256 lastRewardTimestamp, uint256 lpSupply, uint256 accAlbPerShare)
+    - event: Withdraw(address indexed user, uint256 indexed pid, uint256 amount)
+rollback_on_reorg: false
